@@ -45,7 +45,7 @@
   padding-left: 30px;
 }
 
-@media(max-width: 480px) {
+@media(max-width: 576px) {
   .content {
     font-size: 18px;
     line-height: 2em;
@@ -56,9 +56,6 @@
   .container {
     padding-top: 20px;
   }
-  .image-boundary {
-    text-align: center;
-  }
   .landing-image {
     border: 3px solid black;
     width: 150px
@@ -66,16 +63,22 @@
   .kategori {
     padding-top: 200px;
   }
-  .full-name {
-    padding-top: 20px;
-    font-size: 22px;
-    text-align: center;
-  }
   .navbar-nav {
     text-align: left;
   }
   .navbar.navbar-expand-lg.navbar-light {
     padding-right: 15px;
     padding-left: 15px;
+  }
+}
+
+@media(max-width: 768px) {
+  .full-name {
+    padding-top: 20px;
+    font-size: 22px;
+    text-align: center;
+  }
+  .image-boundary {
+    text-align: center;
   }
 }
