@@ -1,81 +1,81 @@
 .top-left {
-    font-size: 40px;
-    font-family: 'Open Sans', sans-serif;
-    color: inherit
-  }
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  color: inherit
+}
 
-  .container {
-    padding-top: 90px;
-  }
+.container {
+  padding-top: 90px;
+}
 
-  .nav-link {
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-  }
+.nav-link {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
 
-  .landing-image {
-    text-align: right;
-    border: 4px solid black;
-  }
+.landing-image {
+  text-align: right;
+  border: 4px solid black;
+}
 
-  .image-boundary {
-    text-align: right;
-  }
+.image-boundary {
+  text-align: right;
+}
 
-  .kategori {
-    padding-top: 300px;
-  }
+.kategori {
+  padding-top: 300px;
+}
 
-  .full-name {
-    font-size: 38px;
-    font-family: 'Open Sans', sans-serif;
-  }
+.full-name {
+  font-size: 38px;
+  font-family: 'Open Sans', sans-serif;
+}
 
+.content {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.navbar.navbar-expand-lg.navbar-light {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@media(max-width: 480px) {
   .content {
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    line-height: 2em;
   }
-
-  .navbar-nav {
+  .top-left {
+    font-size: 20px;
+  }
+  .container {
+    padding-top: 20px;
+  }
+  .image-boundary {
     text-align: center;
   }
-  
-
-  @media(max-width: 480px) {
-    .content {
-      font-size: 18px;
-      line-height: 2em;
-    }
-
-    .top-left {
-      font-size: 20px;
-    }
-
-    .container {
-      padding-top: 20px;
-    }
-
-    .image-boundary {
-      text-align: center;
-    }
-
-
-    .landing-image {
-      border: 3px solid black;
-      width: 150px
-    }
-
-    .kategori {
-      padding-top: 200px;
-    }
-
-    .full-name {
-      padding-top: 20px;
-      font-size: 22px;
-      text-align: center;
-    }
-
-    .navbar-nav {
-      text-align: left;
-    }
+  .landing-image {
+    border: 3px solid black;
+    width: 150px
   }
+  .kategori {
+    padding-top: 200px;
+  }
+  .full-name {
+    padding-top: 20px;
+    font-size: 22px;
+    text-align: center;
+  }
+  .navbar-nav {
+    text-align: left;
+  }
+  .navbar.navbar-expand-lg.navbar-light {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
