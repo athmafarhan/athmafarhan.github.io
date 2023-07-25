@@ -107,8 +107,8 @@ checkConsecutiveCoupon();
 checkConsecutiveCoupon();
 
 function checkConsecutiveCoupon() {
+  countDouble = 0;
   for (let i = 0; i < couponCount - 1; i++) {
-    countDouble = 0;
     if (
       sortedCoupons[i]["label"] == sortedCoupons[i + 1]["label"] &&
       sortedCoupons[i]["label"] != "Anda Belum Beruntung"
