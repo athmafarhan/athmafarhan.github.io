@@ -99,12 +99,16 @@ while (countDouble <= 0) {
     ) {
       // Tambah count jika terdapat kode kupon yg urut
       countDouble++;
+      console.log("==================================");
       console.log(sortedCoupons[i]);
+      console.log("--------------------------");
 
       // Reassign dan tukar kode kupon berhadiah ke kode kupon lain yang masih kosong
-      sortedCoupons[i]["label"] = "Anda Belum Beruntung";
       sortedCoupons[sortedCoupons.length - 1 - i]["label"] =
         sortedCoupons[i]["label"];
+      sortedCoupons[i]["label"] = "Anda Belum Beruntung";
+      console.log(sortedCoupons[sortedCoupons.length - 1 - i]);
+      console.log("==================================");
     }
   }
   console.log(countDouble);
