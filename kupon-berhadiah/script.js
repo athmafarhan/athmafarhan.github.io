@@ -2,6 +2,8 @@ let coupons = [];
 let couponsPerBox = 1000;
 let lastCouponNumber = 1;
 let prizeCoupons = [];
+let countNon = 0;
+let countGift = 0;
 let prizes = [
   { label: "Rp. 100.000", total: 5 },
   { label: "Rp. 50.000", total: 10 },
@@ -33,7 +35,7 @@ for (let j = 0; j < 10; j++) {
 
   // Assign kupon berhadiah sejumlah kuota hadiah
   for (let h = 0; h < prizeCoupons.length; h++) {
-    coupons[j][h * 3]["label"] = `Hadiah ${prizeCoupons[h]}`;
+    coupons[j][h * 2]["label"] = `Hadiah ${prizeCoupons[h]}`;
   }
 
   // Assign kupon tidak berhadiah
@@ -41,9 +43,16 @@ for (let j = 0; j < 10; j++) {
     if (coupons[j][i]["label"] === undefined) {
       coupons[j][i]["label"] = "Anda Belum Beruntung";
     }
+
+    // if (coupons[j][i]["label"] != "Anda Belum Beruntung") {
+    //   countNon++;
+    // }
+    // if (coupons[j][i]["label"] == "Anda Belum Beruntung") {
+    //   countGift++;
+    // }
   }
 }
-// console.log(coupons);
+// console.log(countNon);
 
 const sortArrayOfObjects = (arr, propertyName, order = "ascending") => {
   const sortedArr = arr.sort((a, b) => {
@@ -87,11 +96,25 @@ console.log(sortedCoupons);
 console.log(coupons);
 
 let couponCount = 10000;
-let countDouble = 0;
+let countDouble;
+let isDouble = true;
 
 // Cek jika ada kupon berhadiah yang urut
-while (countDouble <= 0) {
+do {} while (isDouble == false);
+{
+  //   console.log(countDouble);
+
+  checkConsecutiveCoupon();
+}
+// checkConsecutiveCoupon();
+// checkConsecutiveCoupon();
+// checkConsecutiveCoupon();
+// checkConsecutiveCoupon();
+// checkConsecutiveCoupon();
+
+function checkConsecutiveCoupon() {
   for (let i = 0; i < couponCount - 1; i++) {
+    countDouble = 0;
     if (
       sortedCoupons[i]["label"] == sortedCoupons[i + 1]["label"] &&
       sortedCoupons[i]["label"] != "Anda Belum Beruntung"
@@ -99,19 +122,76 @@ while (countDouble <= 0) {
     ) {
       // Tambah count jika terdapat kode kupon yg urut
       countDouble++;
-      console.log("==================================");
+      // console.log("==================================");
       console.log(sortedCoupons[i]);
-      console.log("--------------------------");
+      // console.log("--------------------------");
+
+      // if (
+      //   // sortedCoupons[sortedCoupons.length - 1 - i]["label"] ==
+      //   sortedCoupons[i + 3]["label"] == "Anda Belum Beruntung"
+      // ) {
+      //   // sortedCoupons[sortedCoupons.length - 1 - i]["label"] =
+      //   sortedCoupons[i + 3]["label"] = sortedCoupons[i]["label"];
+      //   sortedCoupons[i]["label"] = "Anda Belum Beruntung";
+      //   // console.log(sortedCoupons[i + 2]);
+      // }
+      if (
+        // sortedCoupons[sortedCoupons.length - 1 - i]["label"] ==
+        sortedCoupons[i + 2]["label"] == "Anda Belum Beruntung"
+      ) {
+        // sortedCoupons[sortedCoupons.length - 1 - i]["label"] =
+        sortedCoupons[i + 2]["label"] = sortedCoupons[i]["label"];
+        sortedCoupons[i + 1]["label"] = "Anda Belum Beruntung";
+        // console.log(sortedCoupons[i + 2]);
+      }
+      if (
+        // sortedCoupons[sortedCoupons.length - 1 - i]["label"] ==
+        sortedCoupons[i - 1]["label"] == "Anda Belum Beruntung"
+      ) {
+        // sortedCoupons[sortedCoupons.length - 1 - i]["label"] =
+        sortedCoupons[i - 1]["label"] = sortedCoupons[i]["label"];
+        sortedCoupons[i]["label"] = "Anda Belum Beruntung";
+        // console.log(sortedCoupons[i + 2]);
+      }
+      if (
+        // sortedCoupons[sortedCoupons.length - 1 - i]["label"] ==
+        sortedCoupons[i - 2]["label"] == "Anda Belum Beruntung"
+      ) {
+        // sortedCoupons[sortedCoupons.length - 1 - i]["label"] =
+        sortedCoupons[i - 2]["label"] = sortedCoupons[i]["label"];
+        sortedCoupons[i]["label"] = "Anda Belum Beruntung";
+        // console.log(sortedCoupons[i + 2]);
+      }
+      // if (
+      //   // sortedCoupons[sortedCoupons.length - 1 - i]["label"] ==
+      //   sortedCoupons[i - 1]["label"] == "Anda Belum Beruntung"
+      // ) {
+      //   // sortedCoupons[sortedCoupons.length - 1 - i]["label"] =
+      //   sortedCoupons[i - 1]["label"] = sortedCoupons[i]["label"];
+      //   sortedCoupons[i]["label"] = "Anda Belum Beruntung";
+      //   // console.log(sortedCoupons[i + 2]);
+      // }
+
+      // if (
+      //   sortedCoupons[sortedCoupons.length - 1 - i]["label"] ==
+      //   // sortedCoupons[i + 2]["label"] ==
+      //   "Anda Belum Beruntung"
+      // ) {
+      //   sortedCoupons[sortedCoupons.length - 1 - i]["label"] =
+      //     // sortedCoupons[i + 2]["label"] = sortedCoupons[i]["label"];
+      //     sortedCoupons[i + 1]["label"] = "Anda Belum Beruntung";
+      //   // console.log(sortedCoupons[i + 2]);
+      // }
 
       // Reassign dan tukar kode kupon berhadiah ke kode kupon lain yang masih kosong
-      sortedCoupons[sortedCoupons.length - 1 - i]["label"] =
-        sortedCoupons[i]["label"];
-      sortedCoupons[i]["label"] = "Anda Belum Beruntung";
-      console.log(sortedCoupons[sortedCoupons.length - 1 - i]);
-      console.log("==================================");
+      // console.log("==================================");
     }
   }
   console.log(countDouble);
+  if (countDouble == 0) {
+    isDouble = false;
+  }
+  // countDouble = 0;
 }
 
 console.log(sortedCoupons);
@@ -127,6 +207,12 @@ console.log(sortedBoxCoupons);
 // Menampilkan ke website
 for (let i = 0; i < sortedBoxCoupons.length; i++) {
   for (let j = 0; j < sortedBoxCoupons[i].length; j++) {
+    if (sortedBoxCoupons[i][j]["label"] != "Anda Belum Beruntung") {
+      countGift++;
+    }
+    if (sortedBoxCoupons[i][j]["label"] == "Anda Belum Beruntung") {
+      countNon++;
+    }
     let element = `
   <div class="col-1 mb-2">
   <div class="card">
@@ -142,3 +228,4 @@ for (let i = 0; i < sortedBoxCoupons.length; i++) {
       .insertAdjacentHTML("beforeend", element);
   }
 }
+console.log(countNon, countGift);
