@@ -100,17 +100,11 @@ let countDouble;
 let isDouble = true;
 
 // Cek jika ada kupon berhadiah yang urut
-do {} while (isDouble == false);
-{
-  //   console.log(countDouble);
-
-  checkConsecutiveCoupon();
-}
-// checkConsecutiveCoupon();
-// checkConsecutiveCoupon();
-// checkConsecutiveCoupon();
-// checkConsecutiveCoupon();
-// checkConsecutiveCoupon();
+checkConsecutiveCoupon();
+checkConsecutiveCoupon();
+checkConsecutiveCoupon();
+checkConsecutiveCoupon();
+checkConsecutiveCoupon();
 
 function checkConsecutiveCoupon() {
   for (let i = 0; i < couponCount - 1; i++) {
