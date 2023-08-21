@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.7993e648.css","mappings":"sJAEA,KACE,4BACF","sources":["styles.css"],"sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap\");\n\nbody {\n  font-family: \"Inter\", sans-serif;\n}\n"],"names":[],"sourceRoot":""}
