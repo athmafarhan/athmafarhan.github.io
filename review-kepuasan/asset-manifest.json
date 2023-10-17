@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/review-kepuasan/static/css/main.d5ce4f35.css",
+    "main.js": "/review-kepuasan/static/js/main.3dbb2bb3.js",
+    "static/js/787.36c37203.chunk.js": "/review-kepuasan/static/js/787.36c37203.chunk.js",
+    "index.html": "/review-kepuasan/index.html",
+    "main.d5ce4f35.css.map": "/review-kepuasan/static/css/main.d5ce4f35.css.map",
+    "main.3dbb2bb3.js.map": "/review-kepuasan/static/js/main.3dbb2bb3.js.map",
+    "787.36c37203.chunk.js.map": "/review-kepuasan/static/js/787.36c37203.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5ce4f35.css",
+    "static/js/main.3dbb2bb3.js"
+  ]
+}
